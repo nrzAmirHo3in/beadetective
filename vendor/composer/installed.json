@@ -1,0 +1,48 @@
+{
+    "packages": [
+        {
+            "name": "nrzamir/simple-tools-php",
+            "version": "1.0",
+            "version_normalized": "1.0.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/nrzAmirHo3in/simple-tools-php.git",
+                "reference": "05e097425a7019d9d79bc943cac42c992ecace64"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/nrzAmirHo3in/simple-tools-php/zipball/05e097425a7019d9d79bc943cac42c992ecace64",
+                "reference": "05e097425a7019d9d79bc943cac42c992ecace64",
+                "shasum": ""
+            },
+            "require-dev": {
+                "nrzamirho3in/simple-tools-php": "^1.0"
+            },
+            "time": "2024-02-05T23:08:32+00:00",
+            "type": "project",
+            "installation-source": "dist",
+            "autoload": {
+                "psr-4": {
+                    "SimpleTools\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "nrzAmirHo3in"
+                }
+            ],
+            "description": "Simple tools for all projects like database functions and routing functions",
+            "support": {
+                "issues": "https://github.com/nrzAmirHo3in/simple-tools-php/issues",
+                "source": "https://github.com/nrzAmirHo3in/simple-tools-php/tree/1.0"
+            },
+            "install-path": "../nrzamir/simple-tools-php"
+        }
+    ],
+    "dev": true,
+    "dev-package-names": []
+}

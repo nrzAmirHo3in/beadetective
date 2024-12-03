@@ -1,0 +1,378 @@
+@import url(all.css);
+@import url(color.css);
+@import url(header.css);
+
+/* -------------------- Landing -------------------- */
+
+.main{
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    background-image: url(../img/Main.jpg);
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    -webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+    z-index: -1;
+}
+
+@supports (-webkit-touch-callout : none) {
+    .main {
+        background-attachment: scroll
+    }
+}
+
+@supports not (-webkit-touch-callout : none) {
+    .main {
+        background-attachment: fixed;
+    }
+}
+
+/* -------------------- Home -------------------- */
+
+div#home{
+    background-image: url(../img/Home-Background.jpg);
+    background-position: left;
+    background-size: cover;
+    position: relative;
+    width: 100%;
+    margin-top: 100vh;
+    text-align: center;
+    height: auto;
+    padding-bottom: 40px;
+}
+
+div#home > h1{
+    color: var(--color-white);
+    text-align: center;
+    font-size: var(--title-font);
+}
+
+div#home div.break::after{
+    content: "";
+    position: absolute;
+    width: 50%;
+    height: 2px;
+    background-color: var(--color-white);
+    left: 50%;
+    transform: translate(-50%);
+}
+
+div#home div.break::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 100%;
+    width: 100%;
+    height: 250px;
+    background: linear-gradient(rgba(0,0,0,0), black 80%);
+}
+
+.products{
+    width: 100%;
+    display: flex;
+    margin: 40px 0;
+}
+
+.product{
+    text-align: center;
+    padding: 20px;
+    margin: auto;
+}
+
+.product p{
+    color: var(--color-white);
+    margin-bottom: 20px;
+    font-size: var(--text-font);
+    text-align: justify;
+    max-width: 400px;
+}
+
+.product h3{
+    color: var(--color-white);
+    font-size: var(--subtitle-font);
+    margin: 10px 0;
+}
+
+.product img{
+    width: 200px;
+    height: 293px;
+    position: relative;
+    border-radius: var(--image-border-radius);
+    border: 2px solid var(--color-light-gray);
+    cursor: pointer;
+}
+
+.product a{
+    background-color: var(--color-light-gray);
+    color: var(--color-black);
+    padding: var(--button-padding);
+    border-radius: var(--button-radius);
+}
+
+#home #product-btn{
+    background-color: var(--color-yellow);
+    color: var(--color-black);
+    padding: var(--button-padding);
+    border-radius: var(--button-radius);
+}
+
+/* -------------------- Yellow room -------------------- */
+
+#yellow-room{
+    position: relative;
+    background-color: var(--color-dark-gray);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 2fr 1fr;
+    text-align: justify;
+    gap: 30px;
+    display: flex;
+    padding: 40px 10%;
+}
+
+#yellow-room > div {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+#yellow-room h1{
+    color: var(--color-white);
+    font-size: var(--title-font);
+}
+
+#yellow-room p{
+    color: var(--color-white);
+}
+
+#yellow-room a{
+    width: fit-content;
+    height: fit-content;
+    background-color: var(--color-yellow);
+    color: var(--color-black);
+    padding: var(--button-padding);
+    border-radius: var(--button-radius);
+}
+
+/* -------------------- Yellow room -------------------- */
+
+#lost-document{
+    position: relative;
+    padding: 60px 0;
+    text-align: center;
+    padding: 30px;
+    background-image: url(../img/lost-document.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#lost-document h1{
+    font-size: var(--title-font);
+    padding: 50px 0;
+}
+
+#lost-document p, #lost-document h1{
+    color: var(--color-white);
+}
+
+#lost-document a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--color-black);
+    background-color: var(--color-yellow);
+    width: fit-content;
+    margin: 30px;
+    padding: var(--button-padding);
+    border-radius: var(--button-radius);
+}
+
+#lost-document a img{
+    width: 22px;
+    margin-right: 20px;
+}
+
+/* -------------------- Footer -------------------- */
+
+footer{
+    position: relative;
+}
+
+footer h1{
+    font-size: var(--title-font);
+    margin: 30px 0;
+}
+
+footer div.blank{
+    background-color: var(--color-dark-gray);
+    width: 100%;
+    height: 480px;
+}
+
+footer div.suppques{
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    top: 150px;
+    height: 0;
+    gap: 50px;
+}      
+
+footer div.suppques p{
+    text-align: justify;
+}
+
+footer div.suppques > p{
+    color: var(--color-white);
+    grid-column: 1 / 3;
+    text-align: center;
+}
+
+footer div.suppques > a:not(.enamad){
+    grid-column: 1 / 3;
+    width: fit-content;
+    height: fit-content;
+    background-color: var(--color-yellow);
+    color: var(--color-black);
+    padding: var(--button-padding);
+    border-radius: var(--button-radius);
+    margin: auto;
+}
+
+.enamad{
+    position: relative;
+    grid-column: 1 / 3;
+    margin: 0 auto;
+    width: fit-content;
+    height: fit-content;
+	background-color: transparent;
+}
+
+.enamad img{
+	width: 80px;
+}
+
+footer div.image{
+    position: absolute;
+    background-image: url(../img/Footer\ BW.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    width: 100%;
+    height: 500px;
+    z-index: -1;
+}
+
+@supports (-webkit-touch-callout : none) {
+    footer div.image {
+        background-attachment: scroll
+    }
+}
+
+@supports not (-webkit-touch-callout : none) {
+    footer div.image {
+        background-attachment: fixed;
+    }
+}
+
+footer div.support, footer div.questions{
+    width: 400px;
+    height: 400px;
+    background-color: var(--color-light-gray);
+    top: 0;
+    border-radius: var(--image-border-radius);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 30px;
+    padding-bottom: 20px;
+    margin: auto;
+    cursor: pointer;
+}
+
+footer div.support img, footer div.questions img{
+    border-radius: 50%;
+    width: 164px;
+    height: 164px;
+    object-fit: cover;
+    margin: 40px 0 0 0;
+}
+
+footer div.links{
+    grid-column: 1 / 3;
+    margin: auto;
+}
+
+footer div.links a {
+    margin: 0 10px;
+}
+
+footer div.links a img {
+    display: inline-block;
+    width: 35px;
+}
+
+footer div.links a img#X {
+    width: 30px;
+}
+
+/* -------------------- Media queries -------------------- */
+
+@media screen and (max-width: 1380px) {
+    nav ul li{
+        margin-left: 20px;
+    }
+}
+
+@media screen and (max-width: 1040px) {
+    footer div.support, footer div.questions {
+        width: 300px;
+    }
+    .products{
+        flex-direction: column;
+    }
+    .product p{
+        max-width: 50%;
+        position: relative;
+        left: 50%;
+        transform: translate(-50%);
+    }
+    #yellow-room{
+        display: flex;
+        flex-direction: column;
+    }
+
+    #yellow-room h1{
+        margin: 20px 0;
+    }
+    #yellow-room p{
+        margin: 20px 0;
+    }
+    #yellow-room a{
+        margin: 20px 0;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    footer div.suppques{
+        display: flex;
+        flex-direction: column;
+    }
+    footer div.image{
+        height: 1010px;
+    }
+}

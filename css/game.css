@@ -1,0 +1,698 @@
+@import url(all.css);
+@import url(color.css);
+
+* {
+    overflow-y: hidden;
+}
+
+input {
+    direction: ltr;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+body {
+    margin: 0;
+    width: 100%;
+    background-color: var(--color-black);
+    overflow: auto;
+}
+
+#projectsvg {
+    position: relative;
+    width: 100%;
+    padding-bottom: 80%;
+    vertical-align: middle;
+    margin: 0;
+    overflow: hidden;
+}
+
+#projectsvg svg {
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+a {
+    width: fit-content;
+    height: fit-content;
+    background-color: var(--color-yellow);
+    color: var(--color-black);
+    padding: var(--button-padding);
+    border-radius: var(--button-radius);
+}
+
+.cursorPointer {
+    cursor: pointer;
+}
+
+#note {
+    position: fixed;
+    background-color: var(--color-yellow);
+    padding: 10px;
+    border-radius: 50%;
+    border: 2px solid var(--color-black);
+    right: 16px;
+    bottom: 16px;
+    height: 60px;
+    width: 60px;
+    cursor: pointer;
+    z-index: 10;
+}
+
+#hint {
+    background-color: var(--color-yellow);
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    padding: 5px;
+    border: 2px solid var(--color-black);
+    position: fixed;
+    right: 100px;
+    bottom: 16px;
+    cursor: pointer;
+    z-index: 10;
+}
+
+#exit,
+#submit {
+    background-color: var(--color-yellow);
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    padding: 10px;
+    border: 2px solid var(--color-black);
+    position: fixed;
+    right: 16px;
+    top: 16px;
+    cursor: pointer;
+    z-index: 10;
+}
+
+#submit {
+    display: none;
+    top: unset;
+    bottom: 90px;
+}
+
+#hint img,
+#addSuspect img,
+#exit img,
+#submit img {
+    width: 100%;
+    height: 100%;
+}
+
+#addSuspect {
+    background-color: var(--color-yellow);
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    padding: 10px;
+    border: 2px solid var(--color-black);
+    position: fixed;
+    right: 16px;
+    bottom: 90px;
+    cursor: pointer;
+    z-index: 10;
+    display: none;
+}
+
+#notebook {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    width: 350px;
+    height: 300px;
+    display: none;
+    box-shadow: 0 0 50px gray;
+    top: 100px;
+    z-index: 99;
+}
+
+#notebook textarea {
+    width: 100%;
+    height: 100%;
+    resize: none;
+    padding: 15px;
+    border-radius: 8px;
+    border: 0;
+    background-color: var(--color-white);
+    font-size: 14px;
+    outline: 0 !important;
+    padding-top: 50px;
+}
+
+#notebook #close {
+    position: absolute;
+    width: 30px;
+    right: 15px;
+    top: 15px;
+    cursor: pointer;
+    background-color: black;
+    border-radius: 50%;
+}
+
+#laptopMainPage {
+    position: absolute;
+    width: 50%;
+    left: 50%;
+    top: 40px;
+    transform: translate(-50%);
+    display: none;
+    width: 300px;
+}
+
+#laptopDesktop {
+    width: 250px;
+    height: auto;
+}
+
+#searchBoxQuerySystem {
+    display: none;
+    position: sticky;
+    top: 436px;
+    height: 73px;
+    width: 640px;
+    border: 0;
+    outline: 0;
+    right: 279px;
+    font-size: 24pt;
+}
+
+#searchBoxBrowser {
+    display: none;
+    position: absolute;
+    border: 0;
+    outline: 0;
+    left: 161px;
+    top: 56px;
+    width: 935px;
+    height: 29px;
+    font-size: large;
+    background-color: transparent;
+}
+
+#background {
+    background-size: cover;
+    width: 1200px;
+    height: 800px;
+    position: relative;
+}
+
+#browserImg {
+    display: none;
+    width: 1200px;
+    height: 703px;
+    position: absolute;
+    left: 0px;
+    top: 97px;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+#closeTelephone {
+    display: none;
+}
+
+#closeTelephone i {
+    color: black;
+}
+
+#Suspects {
+    display: none;
+    position: absolute;
+    width: 382px;
+    height: 250px;
+    left: 480px;
+    top: 113px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+}
+
+#Suspects div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+#Suspects div.checked::after {
+    position: absolute;
+    content: "\2713";
+    top: 0;
+    color: #75ff3f;
+}
+
+#Suspects div img {
+    width: 80%;
+    height: 80%;
+    cursor: pointer;
+    object-fit: cover;
+}
+
+#hintPage #close {
+    position: absolute;
+    width: 30px;
+    top: 15px;
+    right: 15px;
+    cursor: pointer;
+}
+
+/* $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ Click Handle Locations $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ */
+
+#laptopClickHandle {
+    position: absolute;
+    background-color: transparent;
+    width: 199px;
+    height: 146px;
+    left: 572px;
+    top: 487px;
+}
+
+#noteMain {
+    position: absolute;
+    background-color: transparent;
+    width: 155px;
+    height: 52px;
+    left: 878px;
+    top: 578px;
+}
+
+#phoneClickHandle {
+    position: absolute;
+    background-color: transparent;
+    width: 171px;
+    height: 159px;
+    left: 264px;
+    top: 477px;
+    border-radius: 50px 28px 74px 100px;
+}
+
+#ShutDownClickHandle {
+    display: none;
+    position: absolute;
+    background-color: transparent;
+    width: 169px;
+    height: 44px;
+    left: 36px;
+    top: 751px;
+}
+
+#MyCamputerClickHandle {
+    display: none;
+    position: absolute;
+    background-color: transparent;
+    width: 169px;
+    height: 106px;
+    left: 57px;
+    top: 81px;
+}
+
+#ExplorerClickHandle {
+    display: none;
+    position: absolute;
+    background-color: transparent;
+    width: 194px;
+    height: 106px;
+    left: 57px;
+    top: 216px;
+}
+
+#PaintClickHandle {
+    display: none;
+    position: absolute;
+    background-color: transparent;
+    width: 160px;
+    height: 106px;
+    left: 68px;
+    top: 336px;
+}
+
+#CloseClickHandle {
+    display: none;
+    position: absolute;
+    background-color: transparent;
+    width: 45px;
+    height: 40px;
+    right: 15px;
+    top: 7px;
+}
+
+#SearchBrowserClickHandle {
+    display: none;
+    position: absolute;
+    background-color: transparent;
+    width: 35px;
+    height: 34px;
+    left: 123px;
+    top: 54px;
+    padding: 0;
+    border-radius: 1000px;
+}
+
+#SearchQuerySystemClickHandle {
+    display: none;
+    position: absolute;
+    background-color: transparent;
+    width: 356px;
+    height: 76px;
+    right: 423px;
+    top: 568px;
+}
+
+.docsBtns {
+    display: none;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    width: 100%;
+    height: 100%;
+    padding: 80px 20px 0;
+    gap: 20px;
+}
+
+.docsBtns a {
+    display: none;
+    width: 100%;
+    height: 100%;
+    /* background-color: rgba(255, 0, 0, 0.5); */
+    background: transparent;
+}
+
+#facebookLogin {
+    z-index: 4;
+    display: none;
+    position: absolute;
+    background-color: transparent;
+    width: 363px;
+    height: 50px;
+    right: 170px;
+    top: 456px;
+}
+
+#instagramLogin {
+    z-index: 4;
+    display: none;
+    position: absolute;
+    background-color: transparent;
+    width: 412px;
+    height: 43px;
+    right: 407px;
+    top: 628px;
+}
+
+#phone1 {
+    display: none;
+    position: absolute;
+    background-color: transparent;
+    border-radius: 50%;
+    width: 100px;
+    height: 90px;
+    right: 692px;
+    top: 190px;
+}
+
+#phone2 {
+    display: none;
+    position: absolute;
+    background-color: transparent;
+    border-radius: 50%;
+    width: 100px;
+    height: 90px;
+    right: 550px;
+    top: 190px;
+}
+
+#phone3 {
+    display: none;
+    position: absolute;
+    background-color: transparent;
+    border-radius: 50%;
+    width: 100px;
+    height: 90px;
+    right: 408px;
+    top: 190px;
+}
+
+#phone4 {
+    display: none;
+    position: absolute;
+    background-color: transparent;
+    border-radius: 50%;
+    width: 100px;
+    height: 90px;
+    right: 692px;
+    top: 300px;
+}
+
+#phone5 {
+    display: none;
+    position: absolute;
+    background-color: transparent;
+    border-radius: 50%;
+    width: 100px;
+    height: 90px;
+    right: 550px;
+    top: 300px;
+}
+
+#phone6 {
+    display: none;
+    position: absolute;
+    background-color: transparent;
+    border-radius: 50%;
+    width: 100px;
+    height: 90px;
+    right: 408px;
+    top: 300px;
+}
+
+#phone7 {
+    display: none;
+    position: absolute;
+    background-color: transparent;
+    border-radius: 50%;
+    width: 100px;
+    height: 90px;
+    right: 692px;
+    top: 408px;
+}
+
+#phone8 {
+    display: none;
+    position: absolute;
+    background-color: transparent;
+    border-radius: 50%;
+    width: 100px;
+    height: 90px;
+    right: 550px;
+    top: 408px;
+}
+
+#phone9 {
+    display: none;
+    position: absolute;
+    background-color: transparent;
+    border-radius: 50%;
+    width: 100px;
+    height: 90px;
+    right: 408px;
+    top: 408px;
+}
+
+#phone0 {
+    display: none;
+    position: absolute;
+    background-color: transparent;
+    border-radius: 50%;
+    width: 100px;
+    height: 90px;
+    right: 550px;
+    top: 516px;
+}
+
+#phoneRing {
+    display: none;
+    position: absolute;
+    background-color: transparent;
+    border-radius: 50%;
+    width: 100px;
+    height: 90px;
+    right: 550px;
+    top: 624px;
+}
+
+#phoneRemove {
+    display: none;
+    position: absolute;
+    background-color: transparent;
+    border-radius: 50%;
+    width: 100px;
+    height: 90px;
+    right: 409px;
+    top: 624px;
+}
+
+/* $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ Gallary $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ */
+
+#querySystemPhoto {
+    display: none;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 5;
+    justify-content: center;
+    align-items: center;
+}
+
+#querySystemPhoto>img {
+    height: 90%;
+}
+
+#closeQuerySystemPhotoBtn,
+#EndGame {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    color: var(--color-white);
+    cursor: pointer;
+}
+
+/* Add new */
+.browserInputs input.username {
+    display: none;
+    z-index: 4;
+    border: 0;
+    outline: 0;
+    position: absolute;
+    left: 389px;
+    top: 395px;
+    height: 55px;
+    width: 435px;
+    font-size: 20pt;
+    background: transparent;
+}
+
+.browserInputs input.pass {
+    display: none;
+    z-index: 4;
+    border: 0;
+    outline: 0;
+    position: absolute;
+    left: 389px;
+    top: 473px;
+    height: 56px;
+    width: 435px;
+    font-size: 20pt;
+    background: transparent;
+}
+
+.browserInputs a {
+    display: none;
+    z-index: 4;
+    border: 0;
+    outline: 0;
+    position: absolute;
+    left: 450px;
+    top: 571px;
+    height: 69px;
+    width: 297px;
+    background: transparent;
+}
+
+#nextPhoto {
+    position: absolute;
+    background-color: var(--color-yellow);
+    left: 40px;
+    bottom: 80px;
+    width: 110px;
+    height: 40px;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    z-index: 20;
+}
+
+#previousPhoto {
+    position: absolute;
+    background-color: var(--color-yellow);
+    right: 80px;
+    bottom: 80px;
+    width: 110px;
+    height: 40px;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    z-index: 20;
+}
+
+#numbers {
+    direction: ltr;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    position: absolute;
+    top: 120px;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+/* راهنما */
+
+#hintPage {
+    position: absolute;
+    width: 400px;
+    height: auto;
+    background-color: var(--color-red);
+    left: 50%;
+    transform: translate(-50%);
+    top: 200px;
+    padding: 20px 5px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    display: none;
+}
+
+#hintPage h2 {
+    color: var(--color-white);
+}
+
+#hintPage #hints p::before {
+    position: absolute;
+    content: "\0021";
+    right: 0px;
+    top: 2px;
+    background-color: var(--color-yellow);
+    color: var(--color-black);
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    border-radius: 50%;
+}
+
+#hintPage #hints p {
+    margin: 10px 0;
+    padding-right: 30px;
+    color: var(--color-white);
+    position: relative;
+}
+
+#hintPage a {
+    margin-top: 20px;
+}
+
+@media screen and (min-width: 600px) {
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+/* Map Posisions */

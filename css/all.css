@@ -1,0 +1,36 @@
+@import url(fonts.css);
+*{
+    direction: ltr;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: 'Plus Jakarta Sans';
+    user-select: none;
+}
+
+label {
+    font-size: calc(var(--subtitle-font) - 2px);
+}
+
+h1, h2, h3, h4, h5, h6, p, pre{
+    cursor: default;
+}
+
+a:not(.enamad){
+    text-decoration: none;
+    color: var(--color-white);
+}
+
+body{
+    overflow-x: hidden;
+    background-color: black;
+}
+
+body::-webkit-scrollbar{
+    background-color: var(--color-black);
+    width: 6px;
+}
+body::-webkit-scrollbar-thumb{
+    background-color: var(--color-yellow);
+    border-radius: var(--button-radius);
+}

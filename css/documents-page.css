@@ -1,0 +1,477 @@
+@import url(all.css);
+@import url(color.css);
+@import url(header.css);
+@import url(font-awesome.min.css);
+
+.main {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    background-image: url(../img/documents-background.jpg);
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: -1;
+}
+
+@supports (-webkit-touch-callout : none) {
+    .main {
+        background-attachment: scroll
+    }
+}
+
+@supports not (-webkit-touch-callout : none) {
+    .main {
+        background-attachment: fixed;
+    }
+}
+
+/* -------------------- Media queries -------------------- */
+
+@media screen and (max-width: 1380px) {
+    .products {
+        flex-direction: column;
+    }
+
+    .product p {
+        max-width: 50%;
+        position: relative;
+        left: 0;
+        transform: translate(-50%);
+    }
+
+    #yellow-room {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #yellow-room h1 {
+        margin: 20px 0;
+    }
+
+    #yellow-room p {
+        margin: 20px 0;
+    }
+
+    #yellow-room a {
+        margin: 20px 0;
+    }
+}
+
+
+/* Only This file */
+
+/* Main */
+
+div.main>div.profile {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    top: calc(100vh - 80%);
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    width: 90%;
+    max-width: 930px;
+    height: 260px;
+    justify-items: center;
+    align-items: center;
+    text-align: center;
+    border-radius: var(--button-radius);
+    background-color: #ffffff6e;
+    padding: 30px;
+}
+
+div.main>div.profile>div.prof img {
+    border-radius: 50%;
+    border: 2px solid var(--color-light-gray);
+    grid-column: 1 / 2;
+    grid-row: 1 / 3;
+    height: 160px;
+}
+
+div.main>div.profile>h3 {
+    color: var(--color-black);
+    font-size: var(--subtitle-font);
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+}
+
+div.main>div.profile>div.coin {
+    grid-column: 2 / 3;
+    grid-row: 1 / 3;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+}
+
+div.main>div.profile>div.coin img {
+    grid-column: 1 / 2;
+    grid-row: 1 / 3;
+    height: 80px;
+}
+
+div.main>div.profile>div.coin h4 {
+    color: var(--color-yellow);
+    font-size: var(--subtitle-font);
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+}
+
+div.main>div.profile>div.coin a {
+    padding: var(--button-padding);
+    color: var(--color-black);
+    background-color: var(--color-yellow);
+    border-radius: var(--button-radius);
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+}
+
+div.main>div.profile>div.solved {
+    grid-column: 3 / 4;
+    grid-row: 1 / 3;
+    display: flex;
+    flex-direction: column;
+    border-radius: var(--button-radius);
+    padding: 20px;
+}
+
+div.main>div.profile>div.solved h3 {
+    font-size: var(--subtitle-font);
+}
+
+div.main>div.profile>div.solved h2 {
+    font-size: var(--text-font);
+    color: var(--color-yellow);
+}
+
+div.main>div.profile>ul {
+    grid-column: 4 / 5;
+    grid-row: 1 / 3;
+    width: fit-content;
+    padding: 0 20px;
+}
+
+div.main>div.profile>ul li {
+    list-style: none;
+    font-size: var(--subtitle-font);
+    position: relative;
+    text-align: justify;
+}
+
+div.main>div.profile>ul li a {
+    color: var(--color-yellow);
+}
+
+div.main>div.profile>ul li::before {
+    content: "";
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: var(--color-yellow);
+    margin-left: -1rem;
+    top: 4px;
+    left: -5px;
+}
+
+/* Documents */
+
+div.docs {
+    background: var(--color-black);
+    position: relative;
+    width: 100%;
+    margin-top: 67vh;
+    text-align: center;
+    min-height: 33vh;
+    padding-bottom: 40px;
+}
+
+div.docs>h2 {
+    color: var(--color-white);
+    text-align: center;
+    font-size: var(--title-font);
+}
+
+div.docs div.break::after {
+    content: "";
+    position: absolute;
+    width: 50%;
+    height: 2px;
+    background-color: var(--color-white);
+    left: 50%;
+    transform: translate(-50%);
+}
+
+div.docs div.break::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 100%;
+    width: 100%;
+    height: 45px;
+    background: linear-gradient(rgba(0, 0, 0, 0), black 80%);
+}
+
+div.documents {
+    width: 80%;
+    display: grid;
+    justify-content: space-evenly;
+    grid-template-columns: repeat(4, 1fr);
+    margin: auto;
+    justify-items: center;
+}
+
+div.doc {
+    background-image: url(../img/man.jpg);
+    background-position: center;
+    background-size: cover;
+    width: 200px;
+    height: 300px;
+    position: relative;
+    text-align: center;
+    margin-top: 50px;
+}
+
+div.doc button {
+    padding: var(--button-padding);
+    border-radius: var(--button-radius);
+    border: 2px solid var(--color-white);
+    display: flex;
+    width: 70%;
+    margin: auto;
+    margin-top: 80px;
+    position: relative;
+    background-color: transparent;
+    color: var(--color-white);
+    font-size: 12pt;
+    cursor: pointer;
+    z-index: 2;
+}
+
+div.doc button img {
+    width: 20px;
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translate(0, -50%);
+    z-index: 2;
+}
+
+div.doc h2 {
+    position: relative;
+    color: var(--color-white);
+    font-size: var(--text-font);
+    margin-top: 20px;
+    z-index: 2;
+}
+
+div.doc img {
+    position: absolute;
+    width: 70%;
+    left: 50%;
+    transform: translate(-50%);
+    top: 40%;
+    z-index: 2;
+}
+
+.darker {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+#buy-coin-dialog {
+    display: none;
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.6);
+    left: 0;
+    top: 0;
+    z-index: 25;
+}
+
+#buy-coin-dialog>div {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 340px;
+    border-radius: 8px;
+    background-color: var(--color-gray);
+    text-align: center;
+    padding: 16px 0;
+}
+
+#buy-coin-dialog>div button {
+    all: unset;
+    cursor: pointer;
+    font-size: var(--text-font);
+    font-weight: bold;
+    padding: var(--button-padding);
+    color: var(--color-black);
+    background-color: var(--color-yellow);
+    border-radius: var(--button-radius);
+}
+
+#buy-coin-dialog>div p,
+#buy-coin-dialog>div h3 {
+    color: var(--color-white);
+    margin-bottom: 16px;
+}
+
+#buy-coin-dialog>div h2 {
+    color: var(--color-white);
+}
+
+#buy-coin-dialog>div span {
+    color: var(--color-yellow);
+    cursor: pointer;
+}
+
+#buy-coin-dialog>div>img#close {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 30px;
+    margin: 8px;
+    cursor: pointer;
+}
+
+/* Passworld Changer Dialog */
+
+#passwordChangerDlg {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    top: 0;
+    left: 0;
+    z-index: 99;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.3s;
+}
+
+#passwordChangerDlg form {
+    position: relative;
+    background-color: var(--color-red);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 24px;
+    border-radius: var(--button-radius);
+}
+
+#passwordChangerDlg form button {
+    border: 0;
+    outline: 0;
+    cursor: pointer;
+    padding: var(--button-padding);
+    width: 100%;
+    background-color: var(--color-yellow);
+    margin-top: 20px;
+    text-align: center;
+    color: var(--color-black);
+    border-radius: var(--button-radius);
+    font-size: var(--text-font);
+    font-weight: bold;
+}
+
+#passwordChangerDlg form .inputs {
+    position: relative;
+    margin: 16px 0;
+}
+
+#passwordChangerDlg form .inputs label {
+    position: absolute;
+    color: var(--color-canary-yellow);
+    width: max-content;
+    right: 0;
+    cursor: text;
+    transition: 0.3s;
+}
+
+#passwordChangerDlg form .inputs input {
+    background-color: transparent;
+    color: var(--color-canary-yellow);
+    outline: 0;
+    border: 0;
+    width: 100%;
+    border-bottom: 2px solid var(--color-dark-gray);
+    transition: 0.3s;
+}
+
+#passwordChangerDlg form .inputs input:focus+label,
+#passwordChangerDlg form .inputs input:valid+label {
+    color: var(--color-yellow);
+    margin-top: -20px;
+    transition: 0.3s;
+}
+
+#passwordChangerDlg .error {
+    position: absolute;
+    opacity: 0;
+    visibility: hidden;
+    left: 50%;
+    top: 25%;
+    transform: translate(-50%, -50%);
+    background-color: var(--color-red);
+    border-radius: var(--button-radius);
+    margin-bottom: 16px;
+    transition: 0.3s;
+}
+
+#passwordChangerDlg .error p {
+    color: var(--color-canary-yellow);
+    padding: 8px 16px;
+}
+
+#closePassChanger{
+    position: absolute;
+    right: 8px;
+    top: 8px;
+    width: 25px;
+    cursor: pointer;
+}
+
+/* Media Queries */
+
+@media screen and (max-width: 985px) {
+    div.main>div.profile {
+        display: flex;
+        flex-direction: column;
+        width: 90%;
+        max-width: 930px;
+        height: 460px;
+        top: calc(100vh - 91%);
+    }
+
+    div.main>div.profile>div.coin {
+        margin: 0;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    div.documents {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (max-width: 790px) {
+    div.documents {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}

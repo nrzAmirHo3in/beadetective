@@ -1,0 +1,58 @@
+{
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
+        "This file is @generated automatically"
+    ],
+    "content-hash": "8316207f63e05865718c15b6e5fc4751",
+    "packages": [
+        {
+            "name": "nrzamir/simple-tools-php",
+            "version": "1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/nrzAmirHo3in/simple-tools-php.git",
+                "reference": "05e097425a7019d9d79bc943cac42c992ecace64"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/nrzAmirHo3in/simple-tools-php/zipball/05e097425a7019d9d79bc943cac42c992ecace64",
+                "reference": "05e097425a7019d9d79bc943cac42c992ecace64",
+                "shasum": ""
+            },
+            "require-dev": {
+                "nrzamirho3in/simple-tools-php": "^1.0"
+            },
+            "type": "project",
+            "autoload": {
+                "psr-4": {
+                    "SimpleTools\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "nrzAmirHo3in"
+                }
+            ],
+            "description": "Simple tools for all projects like database functions and routing functions",
+            "support": {
+                "issues": "https://github.com/nrzAmirHo3in/simple-tools-php/issues",
+                "source": "https://github.com/nrzAmirHo3in/simple-tools-php/tree/1.0"
+            },
+            "time": "2024-02-05T23:08:32+00:00"
+        }
+    ],
+    "packages-dev": [],
+    "aliases": [],
+    "minimum-stability": "stable",
+    "stability-flags": [],
+    "prefer-stable": false,
+    "prefer-lowest": false,
+    "platform": [],
+    "platform-dev": [],
+    "plugin-api-version": "2.6.0"
+}

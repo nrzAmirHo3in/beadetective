@@ -1,0 +1,238 @@
+@import url(all.css);
+@import url(color.css);
+
+input:-webkit-autofill {
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: white;
+}
+
+#login-register {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(0, 0, 0, 0.6);
+    position: relative;
+    z-index: 99 !important;
+    transition: 0.3s;
+}
+
+div.page {
+    position: relative;
+    background-color: var(--color-red);
+    width: 90%;
+    max-width: 1200px;
+    height: 700px;
+    border-radius: var(--big-border-radius);
+  z-index: 99;
+}
+
+div.page img.image {
+    height: 700px;
+    position: absolute;
+    left: 0;
+    border-radius: var(--big-border-radius);
+}
+
+div.page img.logo {
+    position: absolute;
+    left: 0;
+    z-index: 2;
+    width: 200px;
+}
+
+div.page div.main-login-register {
+    width: 300px;
+    height: 500px;
+    background-color: var(--color-black);
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+    right: 10%;
+    border-radius: var(--button-radius);
+    z-index: 2;
+}
+
+div.page img#close{
+    top: 20px;
+    right: 20px;
+    position: absolute;
+    width: 30px;
+    cursor: pointer;
+}
+
+div.page div.main-login-register div.btns {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 15px;
+}
+
+div.page div.main-login-register div.btns p {
+    color: var(--color-canary-yellow);
+    opacity: 0.7;
+    padding-bottom: 3px;
+    cursor: pointer;
+}
+
+div.page div.main-login-register div.btns p.active {
+    opacity: 1;
+    border-bottom: 2px solid var(--color-red);
+}
+
+div.page div.main-login-register div.btns input {
+    display: none;
+}
+
+/* Error */
+
+#error {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    top: 25px;
+    background-color: var(--color-red);
+    padding: 20px 0;
+    width: 90%;
+    border-radius: var(--big-border-radius);
+    text-align: center;
+    max-width: 1200px;
+    opacity: 0;
+    transition: 0.3s;
+  	z-index: 9999;
+}
+
+#error h3 {
+    color: var(--color-canary-yellow);
+    font-size: var(--subtitle-font);
+}
+
+/* 
+//////////////////////
+////// Register //////
+//////////////////////
+*/
+div.page div.main-login-register .form {
+    position: relative;
+    margin: 0 25px;
+}
+
+div.page div.main-login-register .inputs {
+    margin: 40px 0;
+}
+
+div.page div.main-login-register .inputs input:focus+label,
+div.page div.main-login-register .inputs input:valid+label {
+    color: var(--color-yellow);
+    margin-top: -20px;
+    transition: 0.3s;
+    font-size: var(--text-font);
+}
+
+div.page div.main-login-register .inputs input:focus,
+div.page div.main-login-register .inputs input:valid {
+    border-bottom: 2px solid var(--color-light-gray);
+    transition: 0.3s;
+}
+
+div.page div.main-login-register .inputs input {
+    background-color: transparent;
+    color: var(--color-canary-yellow);
+    outline: 0;
+    border: 0;
+    width: 100%;
+    border-bottom: 2px solid var(--color-dark-gray);
+    transition: 0.3s;
+}
+
+div.page div.main-login-register .inputs label {
+    color: var(--color-canary-yellow);
+    position: absolute;
+    left: 0;
+    transition: 0.3s;
+    cursor: text;
+}
+
+div.page div.main-login-register #gender label {
+    color: var(--color-canary-yellow);
+    margin-right: 5px;
+}
+
+#female {
+    margin-right: 20px;
+}
+
+div.page div.main-login-register  a {
+    padding: var(--button-padding);
+    width: 100%;
+    background-color: var(--color-yellow);
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    margin-top: 20px;
+    text-align: center;
+    color: var(--color-black);
+    border-radius: var(--button-radius);
+}
+
+div.page div.main-login-register a#changePhone {
+    all: unset;
+    color: var(--color-yellow);
+}
+
+div.page div.main-login-register a#sendVerify{
+    margin-top: -20px;
+}
+
+div.page div.main-login-register .change {
+    color: var(--color-yellow);
+    position: absolute;
+    bottom: -100px;
+    width: 100%;
+    text-align: center;
+    cursor: pointer;
+}
+
+div.page div.main-login-register #login-form {
+    display: none;
+}
+
+div.page div.main-login-register #login-form a {
+    margin-top: -20px;
+}
+
+#forgot-pass{
+    margin-bottom: -40px;
+}
+
+/* Media Queries */
+
+@media screen and (max-width: 1200px) {
+    div.page div.main-login-register {
+        right: 5%;
+    }
+}
+
+@media screen and (max-width: 1070px) {
+    div.page div.main-login-register {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        right: auto;
+        width: 100%;
+        max-width: 300px;
+    }
+
+    div.page img.image {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 590px) {
+    #error h3 {
+        font-size: var(--text-font);
+    }
+}
+

@@ -1,0 +1,702 @@
+@import url(all.css);
+
+:root {
+    --background-light: #E0E0E0;
+    --navbar-selected: #4FC3F7;
+    --theme: #b4e7ff;
+}
+
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    direction: rtl;
+    height: 100vh;
+    background-color: aliceblue;
+    display: flex;
+    overflow: hidden;
+}
+
+input[type="file"] {
+    display: none;
+}
+
+
+/* Navbar */
+
+nav {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    background-image: url(../img/navbar-panel-background.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+    position: relative;
+    font-family: 'iranSans';
+}
+
+nav button {
+    border: 0;
+    outline: 0;
+    background-color: transparent;
+    color: #333;
+    padding: 20px 30px;
+    cursor: pointer;
+}
+
+.logout {
+    position: absolute;
+    bottom: 0;
+}
+
+.list {
+    display: none;
+    margin-right: 15px;
+    white-space: nowrap;
+    z-index: 5;
+}
+
+.icon {
+    font-size: 16pt;
+    margin-top: 7px;
+    z-index: 5;
+}
+
+nav a {
+    background-color: transparent;
+    padding: 20px 30px;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.active {
+    position: absolute;
+    background-color: var(--navbar-selected);
+    left: 0;
+    top: 76px;
+    width: 90%;
+    height: 55px;
+    border-radius: 0 12px 12px 0;
+    opacity: 1;
+    margin-top: 13px;
+}
+
+.active::after {
+    content: "";
+    position: absolute;
+    background-color: transparent;
+    width: 20px;
+    height: 20px;
+    left: 0;
+    top: -20px;
+    border-radius: 0 0 0 100% / 0 0 0 50%;
+    box-shadow: 0 10px 0 0 var(--navbar-selected);
+}
+
+.active::before {
+    content: "";
+    position: absolute;
+    background-color: transparent;
+    width: 20px;
+    height: 20px;
+    left: 0;
+    bottom: -20px;
+    border-radius: 100% 0 0 0 / 50% 0 0 0;
+    box-shadow: 0 -10px 0 0 var(--navbar-selected);
+}
+
+.pages {
+    display: none;
+}
+
+.body {
+    width: 100%;
+    height: 100%;
+    box-shadow: inset 0 0 15px gray;
+}
+
+.show {
+    height: 100%;
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+}
+
+input[type="radio"] {
+    display: none;
+}
+
+
+/* page 1 */
+
+form.student-form {
+    background-color: var(--theme);
+    padding: 30px;
+    border-radius: 16px;
+    box-shadow: 0 0 15px gray;
+    width: 740px;
+    text-align: center;
+    font-family: "iranSans";
+    display: none;
+}
+
+form.student-form .inputs {
+    margin-top: 30px;
+    position: relative;
+}
+
+form.student-form .inputs label {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0);
+    font-family: 'iranSans';
+    background-color: #fff;
+    padding: 5px 20px;
+    border-radius: 8px;
+    margin-top: 3px;
+    cursor: text;
+    transition: 0.3s;
+    display: inline-block;
+}
+
+form.student-form .inputs input {
+    padding: 10px;
+    border: 0;
+    outline: 0;
+    font-family: 'iranSans';
+    border-radius: 8px;
+    text-align: right;
+    width: 100%;
+    background-color: #fff;
+}
+
+form.student-form .inputs input[type=button] {
+    text-align: center;
+}
+
+form.student-form .inputs input:focus+label,
+form.student-form .inputs input:valid+label {
+    margin-top: -28px;
+    transition: 0.3s;
+}
+
+form.student-form .inputs i {
+    position: absolute;
+    right: 15px;
+    top: 30%;
+    cursor: pointer;
+}
+
+form.student-form .inputs input[type="button"] {
+    font-size: 14pt;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+form.student-form .inputs input[type="button"]:hover {
+    background-color: #d6d6d6;
+}
+
+form textarea {
+    padding: 10px;
+    border: 0;
+    outline: 0;
+    font-family: 'iranSans';
+    border-radius: 8px;
+    text-align: right;
+    width: 100%;
+    background-color: #fff;
+    resize: none;
+    height: 150px;
+}
+
+form.student-form .inputs textarea:focus+label,
+form.student-form .inputs textarea:valid+label {
+    margin-top: -28px;
+    transition: 0.3s;
+}
+
+form.student-form .dis-enable {
+    width: 100%;
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 10px;
+}
+
+div#other {
+    display: none;
+}
+
+div#other label {
+    margin-right: 10px;
+}
+
+form.student-form .dis-enable #laptop:checked+div#other {
+    display: block;
+}
+
+form.student-form .dis-enable label {
+    margin-right: 20px;
+}
+
+progress {
+    width: 100%;
+    accent-color: var(--navbar-selected);
+}
+
+#page1div {
+    padding: 20px;
+}
+
+.upload {
+    background-color: #fff;
+    border-radius: 8px;
+    margin: 10px 0;
+    padding: 10px 0;
+    cursor: pointer;
+}
+
+.upload * {
+    cursor: pointer;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+
+/* Edit Alerts */
+
+.edit-student {
+    z-index: 99;
+    position: absolute;
+    right: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: #00404176;
+    backdrop-filter: blur(3px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-family: 'iranSans';
+    display: none;
+}
+
+.edit-student .student-form {
+    background: linear-gradient(to bottom, rgb(72, 197, 251), rgb(39, 147, 205));
+}
+
+.edit-star {
+    z-index: 99;
+    position: absolute;
+    right: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: #00404176;
+    backdrop-filter: blur(3px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-family: 'iranSans';
+    display: none;
+}
+
+.edit-star .student-form {
+    max-width: 70%;
+}
+
+.flex-row {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+
+}
+
+.flex-row .inputs {
+    width: 48%;
+}
+
+/* Page 2 & 3 & 4 */
+
+#page2div {
+    flex-direction: column;
+}
+
+.table {
+    height: 70vh;
+    width: 90%;
+}
+
+.table-header {
+    width: 100%;
+    border-bottom: 3px solid #333;
+    margin-bottom: 5px;
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr 3fr;
+    font-family: "iranSans";
+    padding: 5px 0px;
+    text-align: center;
+    position: relative;
+}
+
+.table-body {
+    display: block;
+    position: relative;
+    width: 100%;
+    overflow-y: auto;
+    margin-top: 10px;
+    height: 100%;
+}
+
+.table-body::-webkit-scrollbar {
+    width: 5px;
+}
+
+.table-body::-webkit-scrollbar-track {
+    background-color: aliceblue;
+}
+
+.table-body::-webkit-scrollbar-thumb {
+    background-color: #333;
+    border-radius: 10px;
+}
+
+.table-body .table-row {
+    width: 100%;
+    height: 60px;
+    background-color: var(--theme);
+    border-radius: 12px;
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr 1fr 1fr 1fr;
+    text-align: center;
+    align-items: center;
+    grid-gap: 1em;
+    font-family: "iranSans";
+    padding: 0 20px;
+    margin: 15px 0;
+}
+
+.table-header::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 30px;
+    bottom: -100%;
+    left: 0;
+    z-index: 9;
+    background: linear-gradient(to bottom, aliceblue 60%, transparent);
+}
+
+.table-body .table-row button {
+    border: 0;
+    outline: 0;
+    font-family: "iranSans";
+    font-size: 12pt;
+    padding: 8px 10px;
+    border-radius: 10px;
+    cursor: pointer;
+    background-color: #fff;
+    transition: 0.2s;
+}
+
+.table-body .table-row button:hover {
+    transition: 0.2s;
+    background-color: #d6d6d6;
+}
+
+.table-body .table-row>div>input {
+    height: 20px;
+    width: 50px;
+
+}
+
+.search-bar {
+    display: flex;
+    width: 70%;
+    margin-bottom: 30px;
+    filter: drop-shadow(0 0 10px gray);
+    justify-content: center;
+    text-align: center;
+}
+
+.search-bar input {
+    width: 50%;
+    border: 0;
+    outline: 0;
+    padding: 10px 20px;
+    font-family: "iranSans";
+    border-radius: 12px 12px 12px 12px;
+    display: block;
+    transition: 0.3s;
+    background-color: #fff;
+}
+
+.search-bar i {
+    height: 42px;
+    width: 30px;
+    padding: 10px;
+    background-color: #b4e7ff;
+    color: #333;
+    cursor: pointer;
+    border-radius: 12px 12px 12px 12px;
+    transition: 0.3s;
+    width: 20%;
+}
+
+.table-body h2 {
+    font-family: "iranSans";
+    text-align: center;
+    margin-top: 30px;
+    color: red;
+}
+
+/* Page 3 */
+
+.msgs {
+    overflow: auto;
+    width: 100%;
+    padding: 30px;
+    height: 100vh;
+}
+
+#page3div {
+    flex-direction: column;
+}
+
+div.msg {
+    position: relative;
+    background-color: var(--theme);
+    padding: 20px;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 0 15px #9e9e9e;
+    width: 100%;
+    transition: 0.3s;
+    margin: 20px 0;
+}
+
+div.msg .icons {
+    position: absolute;
+    left: 20px;
+    transition: 0.3s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+div.msg .icons * {
+    margin: 0 10px;
+    transition: 0.3s;
+}
+
+div.msg p {
+    margin-top: 20px;
+    position: absolute;
+    transition: 0.3s;
+}
+
+/* Page 4 */
+#page4div {
+    flex-direction: column;
+}
+
+#page4div .table-header {
+    width: 100%;
+    border-bottom: 3px solid #333;
+    margin-bottom: 5px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 2fr;
+    font-family: "iranSans";
+    padding: 5px 10px;
+    text-align: center;
+    position: relative;
+}
+
+#page4div .table-body .table-row {
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+}
+
+#discount {
+    display: block !important;
+    margin: 60px 0;
+}
+
+/* Media Queries */
+
+@media screen and (width < 815px) {
+
+    .table,
+    .table-row button {
+        font-size: 8pt !important;
+    }
+
+    .table-body {
+        font-size: 8pt !important;
+    }
+
+    .table-row {
+        padding: 0 0 !important;
+    }
+
+    .edit-star .student-form {
+        font-size: 10pt !important;
+    }
+
+    .option button {
+        font-size: x-small !important;
+    }
+}
+
+@media screen and (width < 720px) {
+    .edit-star .student-form {
+        font-size: 6pt !important;
+        max-width: 100% !important;
+    }
+
+    .option button {
+        font-size: xx-small !important;
+    }
+}
+
+@media screen and (width < 446px) {
+    .option h2 {
+        font-size: 10pt !important;
+    }
+}
+
+@media screen and (width < 402px) {
+    .option h2 {
+        font-size: 7pt !important;
+    }
+}
+
+@media screen and (width < 480px) {
+    form.student-form .inputs label {
+        font-size: 8pt;
+        margin-top: 8px;
+    }
+
+    nav {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #333;
+        position: relative;
+        font-family: 'iranSans';
+        height: 68px;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .logout {
+        position: relative;
+    }
+
+    .icon {
+        color: #333;
+    }
+
+    .active {
+        display: none;
+    }
+
+    nav a {
+        color: #333;
+        display: none;
+        border-radius: 16px;
+        transition: 0.2s;
+    }
+
+    nav a:hover {
+        background-color: #d6d6d6;
+        color: #333;
+        transition: 0.2s;
+    }
+
+    body {
+        display: block;
+        overflow: hidden;
+    }
+
+    nav button {
+        border: 0;
+        outline: 0;
+        background-color: transparent;
+        color: aliceblue;
+        padding: 20px 30px;
+        cursor: pointer;
+        transform: rotate(-90deg);
+    }
+
+    .list {
+        display: block;
+    }
+
+    .body {
+        height: calc(100% - 120px);
+    }
+
+    .table,
+    .table-row button {
+        font-size: 8pt !important;
+    }
+
+    .table-body {
+        font-size: 6pt !important;
+    }
+
+    .table-row {
+        padding: 0 0 !important;
+    }
+
+    .option {
+        padding: 5px;
+    }
+}
+
+#level1 {
+    display: block;
+}
+
+.tooltip {
+    position: relative;
+    display: inline-block;
+    border-bottom: 1px solid black;
+    transition: 0.3s;
+}
+
+/* Tooltip text */
+.tooltip .tooltiptext {
+    visibility: hidden;
+    opacity: 0;
+    width: 120px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    padding: 5px 0;
+    border-radius: 6px;
+    position: absolute;
+    width: 120px;
+    bottom: 100%;
+    left: 50%;
+    transform: translate(-50%);
+    z-index: 1;
+    transition: 0.3s;
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+    transition: 0.3s;
+}

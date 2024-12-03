@@ -1,0 +1,160 @@
+/* -------------------- Nav -------------------- */
+.fixedNav {
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+    top: 0;
+}
+
+.fixed {
+    position: fixed;
+    width: 100%;
+    z-index: 50;
+    top: 0;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.3s;
+}
+
+nav {
+    position: relative;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    transition: 0.3s;
+    top: 20px;
+    direction: rtl;
+}
+
+nav ul {
+    display: flex;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    transition: 0.3s;
+    visibility: visible;
+    opacity: 1;
+}
+
+nav ul li {
+    margin-left: 50px;
+    list-style: none;
+    color: var(--color-white);
+    cursor: pointer;
+    position: relative;
+}
+
+nav ul li a {
+    font-size: var(--subtitle-font);
+    transition: 0.3s;
+}
+
+nav ul li::after {
+    content: "";
+    position: absolute;
+    background-color: var(--color-white);
+    width: 0;
+    height: 2px;
+    left: 0;
+    bottom: -5px;
+    transition: 0.3s;
+}
+
+nav ul li:hover:after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    transition: 0.3s;
+}
+
+nav img {
+    cursor: pointer;
+}
+
+nav img#logo {
+    width: 250px;
+    position: absolute;
+    left: 0;
+    transition: 0.3s;
+}
+
+nav img#user,
+nav img#shop,
+nav a>img {
+    margin-right: 20px;
+    width: 20px;
+    margin: 0 30px;
+}
+
+nav a>img{
+    margin-top: 10px;
+}
+
+nav img#menu {
+    display: none;
+    width: 30px;
+    margin-right: 20px;
+}
+
+/* -------------------- Media -------------------- */
+
+@media screen and (max-width: 1380px) {
+    nav ul li {
+        margin-left: 20px;
+    }
+}
+
+@media screen and (max-width: 1040px) {
+    nav img#menu {
+        display: block
+    }
+
+    nav img#user,
+    nav img#shop {
+        margin-right: 20px;
+    }
+
+    nav ul {
+        visibility: hidden;
+        opacity: 0;
+        margin-top: 230px !important;
+        padding: 30px 0;
+        width: 100%;
+        background-color: var(--color-black);
+        transition: 0.3s;
+    }
+
+    nav ul {
+        display: flex;
+        flex-direction: column;
+        align-items: right;
+        margin-top: 150px !important;
+    }
+
+    nav ul li {
+        width: max-content;
+        margin-top: 20px;
+        margin-right: 50px;
+        display: flex;
+    }
+}
+
+@media screen and (min-width: 1040px) {
+    nav ul {
+        visibility: visible !important;
+        opacity: 1 !important;
+    }
+}
+
+@media screen and (max-width: 374px) {
+
+    nav img#user,
+    nav img#shop {
+        margin-right: 10px;
+    }
+
+    nav img#menu {
+        margin-right: 10px;
+    }
+}

@@ -1,0 +1,154 @@
+@import url(all.css);
+@import url(color.css);
+@import url(header.css);
+
+body {
+    background-color: var(--color-black);
+}
+
+.main {
+    position: absolute;
+    width: 100%;
+    height: 80vh;
+    top: 0;
+    background-image: url(../img/product-info-background.jpg);
+    background-attachment: fixed;
+    background-position: bottom;
+    background-size: cover;
+    background-repeat: no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    z-index: -1;
+}
+
+@supports (-webkit-touch-callout : none) {
+    .main {
+        background-attachment: scroll
+    }
+}
+
+@supports not (-webkit-touch-callout : none) {
+    .main {
+        background-attachment: fixed;
+    }
+}
+
+/* -------------------- Media queries -------------------- */
+
+@media screen and (max-width: 1380px) {
+    nav ul li {
+        margin-left: 20px;
+    }
+}
+
+/* Only this file */
+
+div.questions {
+    position: relative;
+    width: 100%;
+    margin-top: 90vh;
+    text-align: center;
+    height: auto;
+    padding-bottom: 40px;
+}
+
+div.questions>h2 {
+    color: var(--color-white);
+    text-align: center;
+    font-size: var(--title-font);
+    margin-bottom: 30px;
+}
+
+div.questions div.break::after {
+    content: "";
+    position: absolute;
+    width: 50%;
+    height: 2px;
+    background-color: var(--color-white);
+    left: 50%;
+    transform: translate(-50%);
+}
+
+div.questions div.break::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 100%;
+    width: 100%;
+    height: 250px;
+    background: linear-gradient(rgba(0, 0, 0, 0), black 80%);
+}
+
+/* Questions */
+.qns {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.question h2,
+.question p {
+    color: var(--color-white);
+    cursor: pointer;
+}
+
+.question h2 {
+    font-size: var(--subtitle-font);
+    width: 90%;
+}
+
+.question p {
+    font-size: var(--text-font);
+    margin-top: 30px;
+    position: absolute;
+}
+
+.question {
+    position: relative;
+    width: 80%;
+    max-width: 1200px;
+    background-color: var(--color-dark-gray);
+    margin: 20px;
+    padding: 20px;
+    border-radius: var(--button-radius);
+    text-align: left;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.question img.arr {
+    position: absolute;
+    right: 10px;
+    top: 8px;
+    padding: 20px;
+    width: 50px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.question .question-image {
+    position: relative;
+    width: fit-content;
+    height: fit-content;
+    max-width: 350px;
+    margin-top: 30px;
+    display: none;
+}
+
+.question.open p {
+    position: relative;
+}
+
+.question.open h2 {
+    color: var(--color-yellow);
+}
+
+.question.open img.arr {
+    filter: invert(32%) sepia(100%) saturate(1000%) hue-rotate(-10deg) brightness(100%) contrast(100%);
+}
+
+.question.open .question-image {
+    display: block;
+}
+

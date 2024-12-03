@@ -1,0 +1,180 @@
+@import url(all.css);
+@import url(color.css);
+@import url(header.css);
+
+body{
+    background-color: var(--color-black);
+}
+
+.main{
+    position: absolute;
+    width: 100%;
+    height: 60vh;
+    top: 0;
+    background-image: url(../img/support-background.jpg);
+    background-attachment: fixed;
+    background-position: bottom;
+    background-size: cover;
+    background-repeat: no-repeat;
+    -webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+    z-index: -1;
+}
+
+@supports (-webkit-touch-callout : none) {
+    .main {
+        background-attachment: scroll
+    }
+}
+
+@supports not (-webkit-touch-callout : none) {
+    .main {
+        background-attachment: fixed;
+    }
+}
+
+/* -------------------- Media queries -------------------- */
+
+@media screen and (max-width: 1380px) {
+    nav ul li{
+        margin-left: 20px;
+    }
+}
+
+@media screen and (max-width: 1040px) {
+    div.sendEmail img{
+        display: none;
+    }
+}
+
+/* Only this file */
+
+#success{
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    width: 300px;
+    background-color: var(--color-light-gray);
+    border-radius: var(--button-radius);
+    text-align: center;
+    padding: 8px 0;
+    top: 200px;
+    animation: hide 0.3s forwards 3s;
+}
+
+@keyframes hide {
+    from{
+        opacity: 1;
+        visibility: visible;
+    }
+    to{
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+
+div.support{
+    position: relative;
+    width: 100%;
+    margin-top: 60vh;
+    text-align: center;
+    height: auto;
+    padding-bottom: 40px;
+}
+
+div.support > h2{
+    color: var(--color-white);
+    text-align: center;
+    font-size: var(--title-font);
+    margin-bottom: 30px;
+}
+
+div.support div.break::after{
+    content: "";
+    position: absolute;
+    width: 50%;
+    height: 2px;
+    background-color: var(--color-white);
+    left: 50%;
+    transform: translate(-50%);
+}
+
+div.support div.break::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 100%;
+    width: 100%;
+    height: 250px;
+    background: linear-gradient(rgba(0,0,0,0), black 80%);
+}
+
+div.sendEmail{
+    width: 100%;
+}
+
+div.sendEmail{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 60px;
+    padding-bottom: 200px;
+    padding-top: 50px;
+    color: var(--color-white);
+
+}
+
+div.sendEmail form{
+    margin-top: 50px;
+}
+div.sendEmail > div{
+    display: flex;
+    gap: 30px;
+}
+
+div.sendEmail img{
+    margin-right: 100px;
+    width: 400px;
+    height: 550px;
+    margin-top: 30px;
+}
+
+div.sendEmail form > div {
+    margin: 20px 0;
+}
+
+div.sendEmail form textarea{
+    width: 300px;
+    height: 150px;
+    resize: none;
+    outline: 0;
+    border: 0;
+    padding: 10px;
+    border-radius: var(--button-radius);
+    background-color: transparent;
+    border: 2px solid var(--color-light-gray);
+    color: var(--color-white);
+}
+
+div.sendEmail form input[type=submit]{
+    color: var(--color-black);
+    background-color: var(--color-yellow);
+    padding: var(--button-padding);
+    border-radius: var(--button-radius);
+    outline: 0;
+    border: 0;
+    cursor: pointer;
+}
+
+div.sendEmail input[type=text], div.sendEmail input[type=email]{
+    width: 300px;
+    outline: 0;
+    border: 0;
+    padding: 10px;
+    border-radius: var(--button-radius);
+    background-color: transparent;
+    border: 2px solid var(--color-light-gray);
+    color: var(--color-white);
+}

@@ -1,0 +1,135 @@
+/* Alerts */
+
+.error {
+    z-index: 999;
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    background-color: #41000076;
+    backdrop-filter: blur(3px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-family: 'iranSans';
+    display: none;
+}
+
+.error div.main-error {
+    background: linear-gradient(to bottom, rgb(251, 72, 72), rgb(205, 39, 39));
+    padding: 40px 80px;
+    border-radius: 16px;
+    box-shadow: 0 0 20px black;
+}
+
+.error div.main-error h3 {
+    margin: 30px;
+}
+
+.error div.main-error input {
+    padding: 10px;
+    border: 0;
+    outline: 0;
+    font-family: 'iranSans';
+    border-radius: 8px;
+    text-align: center;
+    width: 100%;
+    transition: 0.3s;
+    cursor: pointer;
+    background-color: #fff;
+}
+
+.error div.main-error input:hover {
+    background-color: #d6d6d6;
+    transition: 0.3s;
+}
+
+.success {
+    z-index: 999;
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    background-color: #00410b76;
+    backdrop-filter: blur(3px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-family: 'iranSans';
+    display: none;
+}
+
+.success div.main-success {
+    background: linear-gradient(to bottom, rgb(81, 251, 72), rgb(39, 205, 56));
+    padding: 40px 80px;
+    border-radius: 16px;
+    box-shadow: 0 0 20px black;
+}
+
+.success div.main-success h3 {
+    margin: 30px;
+}
+
+.success div.main-success input {
+    padding: 10px;
+    border: 0;
+    outline: 0;
+    font-family: 'iranSans';
+    border-radius: 8px;
+    text-align: center;
+    width: 100%;
+    transition: 0.3s;
+    cursor: pointer;
+    background-color: #fff;
+}
+
+.success div.main-success input:hover {
+    background-color: #d6d6d6;
+    transition: 0.3s;
+}
+
+.confirm {
+    z-index: 99;
+    position: absolute;
+    right: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: #413f0076;
+    backdrop-filter: blur(3px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-family: 'iranSans';
+    display: none;
+}
+
+.confirm div.main-confirm {
+    background: linear-gradient(to bottom, rgb(251, 251, 72), rgb(188, 205, 39));
+    padding: 40px 80px;
+    border-radius: 16px;
+    box-shadow: 0 0 20px black;
+}
+
+.confirm div.main-confirm h3 {
+    margin: 30px;
+}
+
+.confirm div.main-confirm input {
+    padding: 10px;
+    border: 0;
+    outline: 0;
+    font-family: 'iranSans';
+    border-radius: 8px;
+    text-align: center;
+    width: 100%;
+    transition: 0.3s;
+    cursor: pointer;
+    margin: 10px;
+    background-color: #fff;
+}
+
+.confirm div.main-confirm input:hover {
+    background-color: #d6d6d6;
+    transition: 0.3s;
+}

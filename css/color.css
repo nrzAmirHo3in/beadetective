@@ -1,0 +1,17 @@
+:root{
+    --color-white: #FFF;
+    --color-black: #000;
+    --color-light-gray: #CCC;
+    --color-dark-gray: #232323;
+    --color-gray: #5e5e5e;
+    --color-yellow: #E7CC25;
+    --color-canary-yellow: #FEF9D3;
+    --color-red: #8b2322; 
+    --button-padding: 6.5px 20px;
+    --title-font: 18px;
+    --subtitle-font: 16px;
+    --text-font: 12px;
+    --small-font: 10px;
+    --button-radius: 8px;
+    --image-border-radius: 16px;
+}

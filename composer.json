@@ -1,0 +1,5 @@
+{
+    "require": {
+        "nrzamir/simple-tools-php": "^1.0"
+    }
+}
