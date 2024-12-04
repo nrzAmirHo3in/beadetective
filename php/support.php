@@ -6,8 +6,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="img/favicon.ico">
-    <title>Support</title>
-    
+    <title>Contact us</title>
+
     <link rel="stylesheet" href="css/login-register-page.css">
     <link rel="stylesheet" href="css/support-page.css">
 </head>
@@ -20,16 +20,20 @@
     <?php
     if ($_SESSION["tnx"] == "tnx") {
         unset($_SESSION["tnx"]);
-        echo '<div id="success"><h3>با تشکر از ثبت نظر شما</h3></div>';
+        echo '<div id="success"><h3>Thanks for your feedback. :)</h3></div>';
     }
     ?>
     <div class="main">
         <div class="support">
-            <h2>Support</h2>
+            <h2>Contact us</h2>
             <div class="break"></div>
             <div class="sendEmail">
                 <p>
-                    If you have any questions or problems, fill out the form below. we will be happy to hear your suggestions too. be curios :))
+                    If you have any questions or problems, fill out the form below. we will be happy to hear your
+                    suggestions too. be curios :))
+                    You can contact us by filling out the form below, or alternatively, you can send an email to the
+                    following address:
+                    Email: support@beadetective.com
                 </p>
                 <div>
                     <form action="./php/sendMessage.php" method="post">
@@ -57,7 +61,7 @@
     <script src="js/jquery.min.js"></script>
     <script src="js/nav-page.js"></script>
     <script src="js/support-page.js"></script>
-    
+
     <script type="text/javascript" src="js/login-register.js"></script>
 </body>
 

@@ -14,7 +14,7 @@ $router = new Router;
 
 $pages = [
     "/",
-    "/Support",
+    "/Contact-us",
     "/Help",
     "/Products",
     "/Questions",
@@ -48,7 +48,7 @@ if ($flag) {
         require_once __DIR__ . "/php/products.php";
     });
 
-    $router->get("/Support", function () {
+    $router->get("/Contact-us", function () {
         require_once __DIR__ . "/php/support.php";
     });
 

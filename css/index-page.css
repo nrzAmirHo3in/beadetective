@@ -376,3 +376,13 @@ footer div.links a img#X {
         height: 1010px;
     }
 }
+/* Footer nav */
+#footer-nav ul li {
+    color: var(--color-white);
+    margin-top: 8px;
+}
+
+#footer-nav {
+    grid-column: 1 / 3;
+    margin-top: 16px;
+}

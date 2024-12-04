@@ -5,7 +5,7 @@
             <li><a href="/">Home</a></li>
             <li><a href="Help">How To Play</a></li>
             <li><a href="Products">Cases</a></li>
-            <li><a href="Support">Support</a></li>
+            <li><a href="Contact-us">Contact us</a></li>
             <li><a href="Questions">FAQ’s</a></li>
         </ul>
 

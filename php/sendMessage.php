@@ -11,4 +11,4 @@ $db = new Database;
 
 $db->insert("messages", $msgData);
 $_SESSION["tnx"] = "tnx";
-header("Location: ../Support");
+header("Location: ../Contact-us");

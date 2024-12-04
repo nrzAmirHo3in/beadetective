@@ -62,9 +62,9 @@
         <div class="blank"></div>
 
         <div class="suppques">
-            <div class="support" onclick="location.href = 'Support.html'">
+            <div class="support" onclick="location.href = '/Contact-us'">
                 <img src="img/Poshtibani.jpg" alt="">
-                <h1>Support</h1>
+                <h1>Contact us</h1>
                 <p style="text-align: center;">Send us your questions, feedback, and suggestions.</p>
             </div>
             <div class="questions" onclick="location.href = 'Questions.html'">
@@ -79,8 +79,19 @@
                 Designed for those who crave a realistic, gripping detective adventure, this game puts you right in the
                 heart of the investigation. Do you have what it takes to crack the case and bring justice to the
                 forgotten?</p>
+            <div id="footer-nav">
+                <hr>
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="Help">How to play</a></li>
+                    <li><a href="Products">Cases</a></li>
+                    <li><a href="Contact-us">Contact us</a></li>
+                    <li><a href="Questions">FAQ's</a></li>
+                </ul>
+            </div>
             <div class="links">
                 <a href="https://instagram.com/beadetective_com" target="_blank"><img src="svg/instagram.svg" alt=""></a>
+                <a href="mailto:support@beadetective.com" target="_blank"><img src="svg/email.svg" alt=""></a>
             </div>
         </div>
 
@@ -91,7 +102,7 @@
     <script src="js/jquery.min.js"></script>
     <script src="js/index-page.js"></script>
     <script src="js/nav-page.js"></script>
-    
+
     <script type="text/javascript" src="js/login-register.js"></script>
 </body>
 

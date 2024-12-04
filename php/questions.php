@@ -25,43 +25,53 @@ session_start();
             <div class="qns">
                 <div class="question">
                     <h2>How to play a case?</h2>
-                    <p>                
-                        to run each of the casefiles, you must first go to the product page and select the desired case. complete the purchase and execute yur casefile. you can access your purchased cases through your profile section.
+                    <p>
+                        To run each of the case files, you must first go to the product page and select the desired
+                        case. Complete the purchase and execute your case file. You can access your purchased cases
+                        through your profile section.
                     </p>
                     <img src="svg/arrow.svg" class="arr" alt="">
                 </div>
                 <div class="question">
-                    <h2>What is COIN  and how to get them?</h2>
+                    <h2>What is COIN and how do I get them?</h2>
                     <p>
-                    COINs in the game can be used to get hints in cases. you get 3 COINs by soving each case correctly or you can buy them !
+                        COINs in the game can be used to get hints in cases. You get 3 COINs by solving each case
+                        correctly, or you can buy them!
                     </p>
                     <img src="svg/arrow.svg" alt="" class="arr">
                 </div>
                 <div class="question">
                     <h2>Can I pause and resume the case at any time?</h2>
                     <p>
-                    of course you can.You can pause your investigation at any point and resume whenever you’re ready to solve the mystery.
+                        of course you can.You can pause your investigation at any point and resume whenever you’re ready
+                        to solve the mystery.
                     </p>
                     <img src="svg/arrow.svg" class="arr" alt="">
                 </div>
                 <div class="question">
                     <h2>Is there an age limit for players?</h2>
                     <p>
-                    Our game are best suited for players aged 13 and above due to the complexity of the puzzles and the nature of the content. However, younger detectives are welcome to join with guidance from an adult.
+                        Our game are best suited for players aged 13 and above due to the complexity of the puzzles and
+                        the nature of the content. However, younger detectives are welcome to join with guidance from an
+                        adult.
                     </p>
                     <img src="svg/arrow.svg" class="arr" alt="">
                 </div>
                 <div class="question">
-                    <h2>What i need to play the game?</h2>
+                    <h2>What do i need to play the game?</h2>
                     <p>
-                    All you need is an internet connection and a devise like laptops, PCs, your mobile and... our games are currently only available in English.
+                        All you need is an internet connection and a device like a laptop, PC, mobile phone, etc. Our
+                        games are currently only available in English.
                     </p>
                     <img src="svg/arrow.svg" class="arr" alt="">
                 </div>
                 <div class="question">
                     <h2>What if I have any questions or issues with the game?</h2>
                     <p>
-                    For immediate assistance, please don’t hesitate to reach out to us. Simply fill out the contact form available on our website’s support page. Our team is ready to provide you with the help you need, from troubleshooting technical issues to answering any gameplay queries you might have. Let us help you get back to solving mysteries with ease and confidence.
+                        For immediate assistance, please don’t hesitate to reach out to us. Simply fill out the contact
+                        form available on our website’s support page. Our team is ready to provide you with the help you
+                        need, from troubleshooting technical issues to answering any gameplay queries you might have.
+                        Let us help you get back to solving mysteries with ease and confidence.
                     </p>
                     <img src="svg/arrow.svg" class="arr" alt="">
                 </div>
