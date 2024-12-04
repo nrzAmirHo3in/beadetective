@@ -9,7 +9,7 @@ session_start();
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="img/favicon.ico">
     <title>How to play</title>
-    
+
     <link rel="stylesheet" href="css/login-register-page.css">
     <link rel="stylesheet" href="css/help-page.css">
 </head>
@@ -23,40 +23,66 @@ session_start();
         <div class="help">
             <h2>How to play</h2>
             <div class="break"></div>
-            <div class="Introduction"><h2>Introduction:</h2></div>
+            <b>
+                <p>Introduction:
+            </b></p>
             <p>
-            be a detective is an online whodunnit game that is in cold case category, in the game you as a detective have unsoved cass in your hands. examine evidences, solve puzzles, follow clues: to reveal the truth.
+                <b>Be A Detective</b> is an online whodunnit game in the cold case category. In this game, you, as a
+                detective, have unsolved cases in your hands. Examine evidence, solve puzzles, and follow clues to
+                reveal the truth.
             </p>
             <p>
-            the cases include information on suspects and related persons, locations, reports and notes, interrogations, and other documents. by searching in the game files (sometimes actual google :)) ) you can find the accused in the cases like an expert detective.
+                The cases include information about suspects and related persons, locations, reports and notes,
+                interrogations, and other documents. By searching through the case files, the internet, or even relying
+                on your general knowledge, you can identify the accused like an expert detective.
             </p>
-            <h2>
-            <hr>
-            <br>
-            welcome to BeADetective, dear detective. in the main page of game you are in your office. you usually have four accesses in your office:</h2>
-            <p>
-            1-notebook:  here's a detectives best friend, the notebook. in this notebook you can write important points or information that you think is useful so you can always access those and find connection between the clues better. the notebook icon is always at the bottom of your screen, like a detective who always has his/her notebook in his/her pocet. :))
-            </p>
-            <p>
-            2-laptop(clip files)  : use this devise to review file information and access emails, documents, interrogations, reports, inquiries and ...   in addition to these , there is a browser in the laptop that takes you to more documents. (tip: use full web address e.g: www.beadetective.com)  sometimes in some cases , as a detective, you have access to various inquiry systems.
+            <p>Our case stories are fictional, but pay close attention to the timelines and locations to solve them
+                successfully. In some cases, we’ve referenced real-world events, locations, or individuals, and we
+                recommend Googling everything to uncover the truth.
             </p>
             <p>
-                3-telephone (cell phone):
-                with this devise, you can call different numbers and collect info from them. also, there may be some message recorded on the answering machine. some times you can write a message with  it to get a respond or reply.
+                <br>
+                Welcome to <b>Be A Detective</b>, dear detective!
+                On the main page of the game, you are in your office. You usually have four key tools in your office:
             </p>
             <p>
-            4- suspects board
-            you must identify the suspects by collecting information and add them to ths board. the + icon on the side of the screen is used in interrogations or when checking documents to add a suspect to the table. finally, you should choose your final suspect here to submit your answer.
+                <b>1. Notebook:</b> <br>
+                Here’s a detective’s best friend—the notebook. In this notebook, you can write down important points or
+                information that you think is useful, so you can always access them and better connect the clues. The
+                notebook icon is always at the bottom of your screen, like a detective who always has their notebook in
+                their pocket. :)
             </p>
             <p>
-                you can always use the game tips to make the path of solving clearer for you.
+                <b>2. Laptop (Case Files):</b><br>
+                Use this device to review case file information and access emails, documents, interrogations, reports,
+                inquiries, and more. In addition to these, the laptop features a browser that lets you access additional
+                documents. (Tip: Use the full web address, e.g., www.beadetective.com). In some cases, as a detective,
+                you may also have access to various inquiry systems.
+            </p>
+            <p>
+                <b>3. Telephone (Cell Phone):</b><br>
+                With this device, you can call different numbers and collect information. There may also be messages
+                recorded on the answering machine. Sometimes, you can write a message using it to receive a response or
+                reply.
+            </p>
+            <p>
+                <b>4. Suspects Board:</b><br>
+                You must identify suspects by collecting information and adding them to this board. The “ + “ icon on
+                the side of the screen is used during interrogations or when reviewing documents to add a suspect to the
+                board. Finally, you should choose your final suspect here to submit your answer.
+            </p>
+            <p>
+                You can always use the game tips to make the path to solving the cases clearer.
+            </p>
+            <p>
+                Let me know if further tweaks are needed!
             </p>
         </div>
 
         <script src="js/jquery.min.js"></script>
         <script src="js/nav-page.js"></script>
         <script src="js/help-page.js"></script>
-        
+
         <script type="text/javascript" src="js/login-register.js"></script>
 </body>
 
