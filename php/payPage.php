@@ -15,13 +15,13 @@
     $db = new Database;
     $pid = $post["p_id"];
     $res = $db->getRow("products", "p_id", $pid);
-    $des = substr($res["p_info"], 0, 200);
+    $des = (strlen($res["p_info"]) > 200) ? substr($res["p_info"], 0, 200)  . "..." : $res["p_info"];
     ?>
     <div class="container">
         <div class="product-info">
             <h2><? echo $res["p_name"] ?></h2>
-            <img src="./Documents/0/poster.jpg" alt="Product Image">
-            <p><strong>Description:</strong> <? echo $des . "..." ?> </p>
+            <img src="./<? echo $res["p_poster"] ?>" alt="Product Image">
+            <p><strong>Description:</strong> <? echo $des ?> </p>
             <p><strong>Price:</strong> €<? echo $res["p_price"] ?></p>
         </div>
 

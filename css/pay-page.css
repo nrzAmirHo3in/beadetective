@@ -9,11 +9,17 @@ body {
 
 .container {
     display: flex;
-    max-width: 900px;
+    max-width: 1100px;
     background: white;
     border-radius: 5px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     height: min-content;
+}
+
+@media screen and (max-width: 635px) {
+    .container {
+        flex-direction: column;
+    }
 }
 
 .product-info {
@@ -23,7 +29,8 @@ body {
 }
 
 .product-info img {
-    max-width: 100%;
+    width: 100%;
+    max-width: 550px;
     height: auto;
     border-radius: 5px;
 }
