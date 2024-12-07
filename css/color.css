@@ -8,10 +8,11 @@
     --color-canary-yellow: #FEF9D3;
     --color-red: #8b2322; 
     --button-padding: 6.5px 20px;
-    --title-font: 18px;
-    --subtitle-font: 16px;
-    --text-font: 12px;
-    --small-font: 10px;
+    /* Fonts */
+    --title-font: 20px;
+    --subtitle-font: 18px;
+    --text-font: 14px;
+    --small-font: 12px;
     --button-radius: 8px;
     --image-border-radius: 16px;
 }

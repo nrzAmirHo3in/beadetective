@@ -43,14 +43,19 @@ session_start();
                         <p><?php echo $row["p_info"] ?></p>
                         <?php
                         if (isset($_SESSION["u_id"])) {
-                            echo '<a href="paymentGateway.php?amount=' . $row["p_price"] . '&pid=' . $row["p_id"] . '">Buy</a>';
+                            ?>
+                            <form action="/Pay" method="post">
+                                <input type="hidden" value="<?php echo $row["p_id"] ?>" name="p_id">
+                                <button type="submit"><b>Buy</b></button>
+                            </form>
+                        <?php
                         } else {
-                            echo '<a href="#" class="disabled">Login for buy</a>';
+                            echo '<a href="" class="disabled">Login for buy</a>';
                         }
                         ?>
                         <div>
                             <div class="price">
-                                <h5>$<?php
+                                <h5>€<?php
                                 $p = $row["p_price"];
                                 echo number_format($p); ?></h5>
                                 <img src="svg/coin.svg" alt="">

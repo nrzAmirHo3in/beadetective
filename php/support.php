@@ -30,7 +30,7 @@
             <div class="sendEmail">
                 <p>
                     If you have any questions or problems, fill out the form below. we will be happy to hear your
-                    suggestions too. be curios :))
+                    suggestions too. be curios :)) <br>
                     You can contact us by filling out the form below, or alternatively, you can send an email to the
                     following address:
                     Email: support@beadetective.com

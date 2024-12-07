@@ -22,7 +22,9 @@ $pages = [
     "/Game",
     "/Panel",
     "/Logout",
-    "/ProductInformation"
+    "/ProductInformation",
+    "/Policies",
+    "/Pay",
 ];
 
 $requestUri = parse_url($_SERVER['REQUEST_URI']);
@@ -42,6 +44,14 @@ if ($flag) {
 
     $router->get("/Help", function () {
         require_once __DIR__ . "/php/help.php";
+    });
+
+    $router->get("/Policies", function ($get) {
+        require_once __DIR__ . "/php/policies.php";
+    });
+
+    $router->post("/Pay", function ($post) {
+        require_once __DIR__ . "/php/payPage.php";
     });
 
     $router->get("/Products", function () {

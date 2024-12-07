@@ -457,6 +457,7 @@ div.doc img {
         max-width: 930px;
         height: 460px;
         top: calc(100vh - 91%);
+        gap: 10px;
     }
 
     div.main>div.profile>div.coin {

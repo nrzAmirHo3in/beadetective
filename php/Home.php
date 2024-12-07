@@ -87,6 +87,7 @@
                     <li><a href="Products">Cases</a></li>
                     <li><a href="Contact-us">Contact us</a></li>
                     <li><a href="Questions">FAQ's</a></li>
+                    <li><a href="Policies">Privacy & policies</a></li>
                 </ul>
             </div>
             <div class="links">
