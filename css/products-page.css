@@ -128,13 +128,18 @@ div.product div.info p {
     width: fit-content;
 }
 
-form button[type=submit] {
+div.product div.info a, form button[type=submit] {
     border: 0;
     outline: 0;
     background-color: var(--color-yellow);
     border-radius: var(--button-radius);
     padding: var(--button-padding);
     color: var(--color-black);
+    width: fit-content;
+    height: fit-content;
+    margin: auto;
+    grid-column: 1 / 2;
+    grid-row: 3 / 4;
 }
 
 div.product div.info>div {
