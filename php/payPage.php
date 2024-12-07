@@ -19,10 +19,10 @@
     ?>
     <div class="container">
         <div class="product-info">
-            <h2><? echo $res["p_name"] ?></h2>
-            <img src="./<? echo $res["p_poster"] ?>" alt="Product Image">
-            <p><strong>Description:</strong> <? echo $des ?> </p>
-            <p><strong>Price:</strong> €<? echo $res["p_price"] ?></p>
+            <h2><?php echo $res["p_name"] ?></h2>
+            <img src="./<?php echo $res["p_poster"] ?>" alt="Product Image">
+            <p><strong>Description:</strong> <?php echo $des ?> </p>
+            <p><strong>Price:</strong> €<?php echo $res["p_price"] ?></p>
         </div>
 
         <div class="form-container">
