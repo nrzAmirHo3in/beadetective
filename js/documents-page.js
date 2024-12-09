@@ -12,7 +12,7 @@ $(document).ready(function () {
     $("#addCoin").click(function (e) {
         e.preventDefault();
         coinSum += 4;
-        coinPrice = coinSum * 7.95;
+        coinPrice = coinSum / 4 * 7.95;
         $("#coin-sum").html(coinSum);
         $("#coin-price").html(coinPrice);
     });
@@ -20,7 +20,7 @@ $(document).ready(function () {
         e.preventDefault();
         if (coinSum > 0) {
             coinSum -= 4;
-            coinPrice = coinSum * 7.95;
+            coinPrice = coinSum / 4 * 7.95;
             $("#coin-sum").html(coinSum);
             $("#coin-price").html(coinPrice);
         }

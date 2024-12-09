@@ -35,6 +35,9 @@
                 <label for="lastName">Last Name:</label>
                 <input type="text" id="lastName" required>
 
+                <label for="EmailAddress">Email Address:</label>
+                <input type="text" id="EmailAddress" required placeholder="Email Address">
+
                 <!-- Country field second -->
                 <label for="country">Country:</label>
                 <select id="country" required onchange="populateCities()">
@@ -48,9 +51,6 @@
 
                 <label for="billingAddress">Billing Address:</label>
                 <input type="text" id="billingAddress" required placeholder="Address">
-
-                <label for="EmailAddress">Email Address:</label>
-                <input type="text" id="EmailAddress" required placeholder="Email Address">
 
                 <label for="postcode">Postcode:</label>
                 <input type="text" id="postcode" required>
