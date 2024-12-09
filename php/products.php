@@ -57,7 +57,7 @@ session_start();
                             <div class="price">
                                 <h5>€<?php
                                 $p = $row["p_price"];
-                                echo number_format($p); ?></h5>
+                                echo $p ?></h5>
                                 <img src="svg/coin.svg" alt="">
                                 <p>Price</p>
                             </div>
