@@ -49,6 +49,9 @@
                 <label for="billingAddress">Billing Address:</label>
                 <input type="text" id="billingAddress" required placeholder="Address">
 
+                <label for="EmailAddress">Email Address:</label>
+                <input type="text" id="EmailAddress" required placeholder="Email Address">
+
                 <label for="postcode">Postcode:</label>
                 <input type="text" id="postcode" required>
 
