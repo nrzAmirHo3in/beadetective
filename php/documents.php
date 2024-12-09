@@ -25,7 +25,7 @@ unset($_SESSION["gameId"]);
             <h3>Coin(s)</h3>
             <span id="addCoin"><i class="fa fa-plus" aria-hidden="true"></i></span>
             <h2 id="coin-sum">0</h2><span id="minusCoin"><i class="fa fa-minus" aria-hidden="true"></i></span>
-            <p>Price: $<span id="coin-price">0</span></p>
+            <p>Price: €<span id="coin-price">0</span></p>
             <button id="buy-coin">Buy coin</button>
         </div>
     </div>
